@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Galería de Proyectos Técnicos de la Facultad de Ingeniería de Sistemas de la Universidad Nacional del Centro del Perú (UNCP) en colaboración con Sudolabs.">
+  <title>Galería de Proyectos Técnicos | UNCP - FIS &amp; Sudolabs</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Skip-link accesible visible al recibir foco -->
+  <a href="#contenido-principal" class="skip-link">Saltar al contenido principal</a>
+
+  <!-- Encabezado con información institucional y navegación semántica con ARIA -->
+  <header class="site-header">
+    <div class="contenedor header-inner">
+      <div class="institucion">
+        <p class="institucion__universidad">UNIVERSIDAD NACIONAL DEL CENTRO DEL PERÚ</p>
+        <p class="institucion__facultad">FACULTAD DE INGENIERÍA DE SISTEMAS</p>
+        <p class="institucion__departamento">DEPARTAMENTO ACADÉMICO DE INGENIERÍA DE SISTEMAS</p>
+        <h1 class="institucion__programa">Programa de Ingeniería de Sistemas</h1>
+      </div>
+      <div class="header-actions">
+        <nav class="main-nav" role="navigation" aria-label="Navegación principal">
+          <ul class="nav-list">
+            <li><a href="#proyectos" class="nav-link">Proyectos</a></li>
+            <li><a href="#contacto" class="nav-link">Contacto</a></li>
+          </ul>
+        </nav>
+        <!-- Botón accesible de Modo Claro/Oscuro -->
+        <button type="button" id="theme-toggle-btn" class="theme-toggle-btn" aria-label="Cambiar tema de color" aria-pressed="false">
+          <svg class="theme-icon theme-icon--sun" aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="23"></line>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+            <line x1="1" y1="12" x2="3" y2="12"></line>
+            <line x1="21" y1="12" x2="23" y2="12"></line>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+          </svg>
+          <svg class="theme-icon theme-icon--moon" aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+          </svg>
+          <span class="theme-toggle-label" id="theme-toggle-text">Oscuro</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Contenido principal semántico -->
+  <main id="contenido-principal" class="site-main">
+    <section id="proyectos" class="seccion-proyectos contenedor" aria-labelledby="titulo-proyectos">
+      <header class="seccion-header">
+        <h2 id="titulo-proyectos" class="seccion-titulo">Galería de Proyectos Técnicos Reales</h2>
+        <p class="seccion-desc">Casos de éxito, arquitectura de software y plataformas digitales desarrolladas por Sudolabs e iniciativas académicas UNCP.</p>
+      </header>
+
+      <!-- Layout Híbrido: CSS Grid asimétrico (masonry) con Flexbox interno -->
+      <div class="galeria-grid">
+
+        <!-- Proyecto 1 (Destacado - Asimétrico) -->
+        <article class="card card--destacada">
+          <div class="card__media">
+            <img src="assets/projects/up-educacion/portada.webp" alt="Captura de pantalla del Portal Académico de Posgrado de la Facultad de Educación UNCP" width="600" height="375" class="card__img">
+          </div>
+          <div class="card__cuerpo">
+            <span class="badge">Educación &amp; UNCP</span>
+            <h3 class="card__titulo">Portal Académico UP Educación — UNCP</h3>
+            <p class="card__descripcion">
+              Digitalización integral del ecosistema informativo y académico de la Unidad de Posgrado de la Facultad de Educación de la UNCP.
+            </p>
+            <div class="card__tags" aria-label="Tecnologías del Portal Académico UP Educación">
+              <span class="tag">Next.js</span>
+              <span class="tag">TypeScript</span>
+              <span class="tag">Tailwind CSS</span>
+            </div>
+          </div>
+          <footer class="card__footer">
+            <a href="https://www.sudolabs.space/proyectos/up-educacion" target="_blank" rel="noopener noreferrer" class="btn-enlace" aria-label="Ver caso de estudio del Portal Académico UP Educación UNCP">Ver Proyecto</a>
+          </footer>
+        </article>
+
+        <!-- Proyecto 2 -->
+        <article class="card">
+          <div class="card__media">
+            <img src="assets/projects/gms-integra/portada.webp" alt="Vista del catálogo y ERP digital de GMS Integra" width="600" height="375" loading="lazy" class="card__img">
+          </div>
+          <div class="card__cuerpo">
+            <span class="badge">Industria &amp; ERP</span>
+            <h3 class="card__titulo">GMS Integra — Plataforma Digital y ERP</h3>
+            <p class="card__descripcion">
+              Plataforma digital para fabricante de ventanas y mamparas de vidrio en Huancayo: catálogo de líneas, showcase de obras y acceso a ERP interno.
+            </p>
+            <div class="card__tags" aria-label="Tecnologías de GMS Integra">
+              <span class="tag">Next.js</span>
+              <span class="tag">PostgreSQL</span>
+              <span class="tag">Tailwind CSS</span>
+            </div>
+          </div>
+          <footer class="card__footer">
+            <a href="https://www.sudolabs.space/proyectos/gms-integra" target="_blank" rel="noopener noreferrer" class="btn-enlace" aria-label="Ver detalles de la plataforma GMS Integra">Ver Proyecto</a>
+          </footer>
+        </article>
+
+        <!-- Proyecto 3 -->
+        <article class="card">
+          <div class="card__media">
+            <img src="assets/projects/softana-info/portada.webp" alt="Diseño Cine-Tech de la web institucional de SofTana" width="600" height="375" loading="lazy" class="card__img">
+          </div>
+          <div class="card__cuerpo">
+            <span class="badge">Salud &amp; Farmacias</span>
+            <h3 class="card__titulo">SofTana.info — Landing Cine-Tech</h3>
+            <p class="card__descripcion">
+              Web institucional de SofTana: interfaz Cine-Tech diseñada para transmitir confianza y control absoluto a boticarios y cadenas de farmacias.
+            </p>
+            <div class="card__tags" aria-label="Tecnologías de SofTana Info">
+              <span class="tag">UI/UX</span>
+              <span class="tag">Next.js</span>
+              <span class="tag">Tailwind CSS</span>
+            </div>
+          </div>
+          <footer class="card__footer">
+            <a href="https://www.sudolabs.space/proyectos/softana-info" target="_blank" rel="noopener noreferrer" class="btn-enlace" aria-label="Ver landing institucional de SofTana">Ver Proyecto</a>
+          </footer>
+        </article>
+
+        <!-- Proyecto 4 (Destacado - Asimétrico) -->
+        <article class="card card--destacada">
+          <div class="card__media">
+            <img src="assets/projects/softana-app/portada.webp" alt="Panel de control e inventario offline en SofTana App" width="600" height="375" loading="lazy" class="card__img">
+          </div>
+          <div class="card__cuerpo">
+            <span class="badge">Offline-First &amp; POS</span>
+            <h3 class="card__titulo">SofTana App — Sistema Operativo para Farmacias</h3>
+            <p class="card__descripcion">
+              Punto de venta y control de inventario para boticas peruanas con arquitectura offline-first que garantiza ventas continuas aun sin conexión a internet.
+            </p>
+            <div class="card__tags" aria-label="Tecnologías de SofTana App">
+              <span class="tag">React</span>
+              <span class="tag">SQLite</span>
+              <span class="tag">Electron</span>
+              <span class="tag">TypeScript</span>
+            </div>
+          </div>
+          <footer class="card__footer">
+            <a href="https://www.sudolabs.space/proyectos/softana-app" target="_blank" rel="noopener noreferrer" class="btn-enlace" aria-label="Ver sistema de punto de venta SofTana App">Ver Proyecto</a>
+          </footer>
+        </article>
+
+        <!-- Proyecto 5 -->
+        <article class="card">
+          <div class="card__media">
+            <img src="assets/projects/enruta/logo.webp" alt="Identidad visual de la plataforma EnRuta Mobility" width="600" height="375" loading="lazy" class="card__img">
+          </div>
+          <div class="card__cuerpo">
+            <span class="badge">Movilidad Urbana</span>
+            <h3 class="card__titulo">EnRuta — Mobility &amp; Civic Tech</h3>
+            <p class="card__descripcion">
+              Plataforma que digitaliza el transporte público urbano en Latinoamérica: rutas, paraderos y tarifas en tiempo real mediante crowdsourcing colaborativo.
+            </p>
+            <div class="card__tags" aria-label="Tecnologías de EnRuta">
+              <span class="tag">Flutter</span>
+              <span class="tag">Geolocalización</span>
+              <span class="tag">Node.js</span>
+            </div>
+          </div>
+          <footer class="card__footer">
+            <a href="https://www.sudolabs.space/proyectos/enruta" target="_blank" rel="noopener noreferrer" class="btn-enlace" aria-label="Ver detalles de EnRuta Mobility">Ver Proyecto</a>
+          </footer>
+        </article>
+
+        <!-- Proyecto 6 -->
+        <article class="card">
+          <div class="card__media">
+            <img src="assets/projects/menudeable/portada.webp" alt="Vitrinas interactivas gastronómicas en Menudeable" width="600" height="375" loading="lazy" class="card__img">
+          </div>
+          <div class="card__cuerpo">
+            <span class="badge">SaaS Gastronómico</span>
+            <h3 class="card__titulo">Menudeable — Digitalización Inteligente</h3>
+            <p class="card__descripcion">
+              SaaS Headless de alto rendimiento para la industria culinaria: menús virtuales dinámicos con renderizado ultra rápido y gestión de órdenes.
+            </p>
+            <div class="card__tags" aria-label="Tecnologías de Menudeable">
+              <span class="tag">Next.js</span>
+              <span class="tag">Cloudflare</span>
+              <span class="tag">TypeScript</span>
+            </div>
+          </div>
+          <footer class="card__footer">
+            <a href="https://www.sudolabs.space/proyectos/menudeable" target="_blank" rel="noopener noreferrer" class="btn-enlace" aria-label="Ver plataforma SaaS Menudeable">Ver Proyecto</a>
+          </footer>
+        </article>
+
+        <!-- Proyecto 7 -->
+        <article class="card">
+          <div class="card__media">
+            <img src="assets/projects/estilo-barbaro/portada.webp" alt="Panel de reservas y finanzas de Estilo Bárbaro" width="600" height="375" loading="lazy" class="card__img">
+          </div>
+          <div class="card__cuerpo">
+            <span class="badge">Operaciones Digitales</span>
+            <h3 class="card__titulo">Estilo Bárbaro — Digitalización Comercial</h3>
+            <p class="card__descripcion">
+              Transformación operativa de barbería tradicional a un modelo analítico: reservas en tiempo real, control de caja y fidelización de clientes.
+            </p>
+            <div class="card__tags" aria-label="Tecnologías de Estilo Bárbaro">
+              <span class="tag">React</span>
+              <span class="tag">Node.js</span>
+              <span class="tag">PostgreSQL</span>
+            </div>
+          </div>
+          <footer class="card__footer">
+            <a href="https://www.sudolabs.space/proyectos/estilo-barbaro" target="_blank" rel="noopener noreferrer" class="btn-enlace" aria-label="Ver caso de estudio de Estilo Bárbaro">Ver Proyecto</a>
+          </footer>
+        </article>
+
+        <!-- Proyecto 8 -->
+        <article class="card">
+          <div class="card__media">
+            <img src="assets/projects/oficri-pnp/portada.webp" alt="Módulo de digitalización documental criminalística OFICRI" width="600" height="375" loading="lazy" class="card__img">
+          </div>
+          <div class="card__cuerpo">
+            <span class="badge">Seguridad &amp; Gobierno</span>
+            <h3 class="card__titulo">Sistema de Gestión Documental OFICRI</h3>
+            <p class="card__descripcion">
+              Reingeniería del flujo pericial criminalístico, sustituyendo expedientes físicos con una plataforma digital segura de control y trazabilidad.
+            </p>
+            <div class="card__tags" aria-label="Tecnologías de OFICRI">
+              <span class="tag">Next.js</span>
+              <span class="tag">Docker</span>
+              <span class="tag">PostgreSQL</span>
+            </div>
+          </div>
+          <footer class="card__footer">
+            <a href="https://www.sudolabs.space/proyectos/oficri-pnp" target="_blank" rel="noopener noreferrer" class="btn-enlace" aria-label="Ver detalles del sistema documental OFICRI">Ver Proyecto</a>
+          </footer>
+        </article>
+
+        <!-- Proyecto 9 -->
+        <article class="card">
+          <div class="card__media">
+            <img src="assets/projects/bloggerito/portada.webp" alt="Interfaz editorial y catálogo de artículos en Bloggerito" width="600" height="375" loading="lazy" class="card__img">
+          </div>
+          <div class="card__cuerpo">
+            <span class="badge">Medios Digitales</span>
+            <h3 class="card__titulo">Bloggerito — Plataforma Digital Editorial</h3>
+            <p class="card__descripcion">
+              Plataforma de contenidos multi-categoría orientada al posicionamiento orgánico, accesibilidad y máxima velocidad de renderizado para autores.
+            </p>
+            <div class="card__tags" aria-label="Tecnologías de Bloggerito">
+              <span class="tag">Next.js</span>
+              <span class="tag">Tailwind CSS</span>
+              <span class="tag">Vercel</span>
+            </div>
+          </div>
+          <footer class="card__footer">
+            <a href="https://www.sudolabs.space/proyectos/bloggerito" target="_blank" rel="noopener noreferrer" class="btn-enlace" aria-label="Ver plataforma digital Bloggerito">Ver Proyecto</a>
+          </footer>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- Sección de contacto/institucional accesible -->
+    <section id="contacto" class="seccion-contacto contenedor" aria-labelledby="titulo-contacto">
+      <h2 id="titulo-contacto" class="seccion-titulo">Contacto Académico e Institucional</h2>
+      <p>Facultad de Ingeniería de Sistemas — Universidad Nacional del Centro del Perú.</p>
+      <p>Ciudad Universitaria: Av. Mariscal Castilla N° 3909, Huancayo, Junín, Perú.</p>
+      <p>Colaboración técnica con Sudolabs (<a href="https://www.sudolabs.space" target="_blank" rel="noopener noreferrer" class="link-externo">sudolabs.space</a>).</p>
+    </section>
+  </main>
+
+  <!-- Pie de página semántico -->
+  <footer class="site-footer">
+    <div class="contenedor footer-inner">
+      <p>&copy; 2026 Universidad Nacional del Centro del Perú &amp; Sudolabs. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+
+  <!-- Script accesible para alternar tema y respetar prefers-color-scheme -->
+  <script>
+    const btnTema = document.getElementById('theme-toggle-btn');
+    const textoBtnTema = document.getElementById('theme-toggle-text');
+    const mediaQueryDark = window.matchMedia('(prefers-color-scheme: dark)');
+
+    function setTema(esOscuro) {
+      document.documentElement.setAttribute('data-theme', esOscuro ? 'dark' : 'light');
+      btnTema.setAttribute('aria-pressed', esOscuro ? 'true' : 'false');
+      btnTema.setAttribute('aria-label', esOscuro ? 'Cambiar a modo claro' : 'Cambiar a modo oscuro');
+      if (textoBtnTema) {
+        textoBtnTema.textContent = esOscuro ? 'Claro' : 'Oscuro';
+      }
+    }
+
+    // Inicialización: preferencia guardada o valor del sistema
+    const temaGuardado = localStorage.getItem('theme-preference');
+    if (temaGuardado) {
+      setTema(temaGuardado === 'dark');
+    } else {
+      setTema(mediaQueryDark.matches);
+    }
+
+    // Escucha cambios del sistema operativo si el usuario no guardó preferencia
+    mediaQueryDark.addEventListener('change', (e) => {
+      if (!localStorage.getItem('theme-preference')) {
+        setTema(e.matches);
+      }
+    });
+
+    // Clic manual en el botón
+    btnTema.addEventListener('click', () => {
+      const temaActual = document.documentElement.getAttribute('data-theme');
+      const nuevoTemaEsOscuro = temaActual !== 'dark';
+      setTema(nuevoTemaEsOscuro);
+      localStorage.setItem('theme-preference', nuevoTemaEsOscuro ? 'dark' : 'light');
+    });
+  </script>
+</body>
+</html>
